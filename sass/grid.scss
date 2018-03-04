@@ -1,0 +1,160 @@
+@mixin mq{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    @include mq{
+        padding:10px 0 10px 0;
+    }
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: flow-root;
+}
+.row{
+    display: flow-root;
+    padding: 20px 0px;
+    @include mq{
+        .three,.four{
+            width: 50%;
+        }
+    }
+}
+
+.grid {
+    box-sizing: border-box;
+    padding: 0px 15px;
+    float: left;
+}
+.one {
+    width: 8.33%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.two {
+    width: 16.66%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.three {
+    width: 25%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.four {
+    width: 33.33%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.five {
+    width: 41.65%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.six {
+    width: 50%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.seven {
+    width: 58.31%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.eight {
+    width: 66.66;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.nine {
+    width: 75%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.ten {
+    width: 83.3%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.eleven {
+    width: 91.66%;
+    @include mq{
+        width: 100%;
+    }
+}
+
+.twelve {
+    width: 100%;
+    display: block;
+    @include mq{
+        width: 100%;
+    }
+}
+.push_4{
+    margin-left: 33.33%;
+    @include mq{
+        margin-left: 0;
+    }
+}
+.clearfix{
+    &::after{
+        content: "";
+        overflow: hidden;
+        clear: both;
+    }
+}
+
+
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+
+.text-blue{
+    color: skyblue;
+}
+.normal_a{
+    text-decoration: none;
+}
+.img-res{
+    width: 100%;
+}
+.img-thumb{
+    width:50%;
+}
+
+
+
+
