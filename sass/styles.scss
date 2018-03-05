@@ -40,11 +40,18 @@
             display: none;
         }
     }
-    .honey-img {
-        min-height: 350px;
-        background: url("../images/amazing_flowers-1920x1080.jpg");
-        background-position: center;
-        background-size: cover;
+    .item-image {
+        position: relative;
+        .title{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: #69c;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
     }
 }
 
@@ -110,6 +117,9 @@
                 box-sizing: border-box;
                 height: 35px;
                 padding: 0 10px;
+                @include mq{
+                    width: 100%;
+                }
             }
         }
     }
@@ -181,6 +191,73 @@
             background: darken(#e3e3e3,5);
         }
     }
+}
+#breadcrumb{
+    width: 100%;
+    .breadcrumb{
+        margin: 0;
+        padding: 10px;
+        li{
+            list-style: none;
+            display: inline;
+            margin-left: 0px;
+            &+li::before{
+                // padding: 2px;
+                color: black;
+                content: "/\00a0"
+            }
+        }
+        a{
+            text-decoration: none;
+            font-size: 15px;
+            color: gray;
+        }
+    }
+}
+
+#item-details{
+    .details{
+        color: #222;
+        h4{
+            color: #77a464;
+        }
+        p{
+            font-size: 1.1em;
+        }
+        select{
+            height: 30px;
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        form{
+            input{
+                box-sizing: border-box;
+                height: 30px;
+                width: 50px;
+            }
+            button{
+                height: 30px;
+                border:none;
+                background: #fa8585;
+                padding: 0 10px;
+                cursor: pointer;
+            }
+        }
+        .catagory{
+            margin-top: 15px;
+            a{
+                text-decoration: none;
+                color: #0d8bcd;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+#click-on-this{
+    width: 100%;
 }
 //end of the main style
 
@@ -270,7 +347,7 @@
             color: lawngreen;
         }
     }
-    h5{
+    h6{
         margin: 0;
     }
     .body{

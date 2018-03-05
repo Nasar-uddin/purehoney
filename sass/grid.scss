@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 20px;
     @include mq{
         padding:10px 0 10px 0;
@@ -19,7 +19,7 @@ body {
     display: flow-root;
 }
 .row{
-    display: flow-root;
+    display: inline-block;
     padding: 20px 0px;
     @include mq{
         .three,.four{
